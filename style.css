@@ -158,7 +158,11 @@ p {
   padding: 3rem;
   text-align: center;
   margin: auto;
+}
+
+.section__container {
   max-width: 1200px;
+  margin: auto;
 }
 
 /* About */
@@ -191,4 +195,62 @@ p {
 .major__title {
   margin-top: 1rem;
   font-size: 24px;
+}
+
+/* Skills */
+
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  text-align: center;
+  color: var(--color-light-white);
+  border-radius: var(--border-radius);
+  background-color: var(--color-light-grey);
+  margin: 20px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+  margin: 0;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+  padding: 20px;
+}
+
+.skill {
+  margin-bottom: 28px;
+}
+.skill_description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.etc {
+  padding: 20px;
 }
