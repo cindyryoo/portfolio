@@ -6,6 +6,7 @@ const homeBtn = document.querySelector('.home__btn');
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarHeight = navbar.getBoundingClientRect().height;
 const homeHeight = home.getBoundingClientRect().height;
+const arrowBtn = document.querySelector('.arrow__btn')
 
 document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight) {
@@ -29,12 +30,23 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoView(link);
 })
 
-function scrollIntoView(selector) {
-        const scrollTo =document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:'smooth'});
-}
 
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
-
+    if(window.scrollY > homeHeight/2){
+        arrowBtn.classList.add('visible');
+    }else{
+        arrowBtn.classList.remove('visible');
+    }
 } ) 
+
+arrowBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+})
+
+
+
+function scrollIntoView(selector) {
+    const scrollTo =document.querySelector(selector);
+scrollTo.scrollIntoView({behavior:'smooth'});
+}
