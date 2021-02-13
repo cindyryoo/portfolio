@@ -357,7 +357,7 @@ p {
 /* Testimonial */
 
 #Testimonial {
-  background-color: var(--color-dark-white);
+  background: var(--color-dark-white);
 }
 
 .testimonials {
