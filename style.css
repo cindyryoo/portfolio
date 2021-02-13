@@ -124,6 +124,15 @@ p {
   background-color: var(--color-dark-pink);
 }
 
+.navbar__toggle-btn {
+  color: var(--color-white);
+  font-size: 24px;
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 24px;
+}
+
 /* Home */
 
 #home {
@@ -182,6 +191,7 @@ p {
   font-size: 70px;
   border: 2px solid var(--color-blue);
   border-radius: 50%;
+  margin: auto;
 }
 
 .major__icon i {
@@ -422,4 +432,61 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-dark-white);
+}
+
+/* For below 768px screen */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: var(--font-medium);
+  }
+  h2 {
+    font-size: var(--font-regular);
+  }
+  h3 {
+    font-size: var(--font-small);
+  }
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .skillsets {
+    flex-direction: column;
+  }
+  .work__categories {
+    padding: 16px 0;
+    margin: 0;
+  }
+  .category__btn {
+    font-size: 16px;
+    padding: 4px 12px;
+  }
+  .category__count {
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+  }
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial_avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
