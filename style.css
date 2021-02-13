@@ -82,12 +82,16 @@ p {
 /* Navbar */
 
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: transparent;
   padding: 4px 12px;
+  z-index: 1;
+  transition: all var(--animation-duration) ease-in-out;
 }
 .navbar__logo {
   display: flex;
@@ -133,12 +137,18 @@ p {
   right: 24px;
 }
 
+#navbar.navbar--dark {
+  background-color: var(--color-black);
+  padding: 0px;
+}
+
 /* Home */
 
 #home {
   background: url("/imgs/home-background.png") center/cover no-repeat;
   text-align: center;
   padding: 3rem;
+  padding-top: 110px;
 }
 
 .home__avatar {
@@ -366,7 +376,7 @@ p {
 
 /* Testimonial */
 
-#Testimonial {
+#testimonials {
   background: var(--color-dark-white);
 }
 
