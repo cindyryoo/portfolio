@@ -84,7 +84,7 @@ p {
   align-items: center;
   color: var(--color-white);
   background-color: var(--color-black);
-  padding: 16px;
+  padding: 4px 12px;
 }
 .navbar__logo {
   display: flex;
@@ -118,4 +118,34 @@ p {
 }
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+
+#home {
+  background: url("/imgs/home-background.png") center/cover no-repeat;
+  text-align: center;
+  padding: 3rem;
+}
+
+.home__avatar {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-grey);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__btn {
+  color: var(--color-white);
+  font-size: var(--font-size-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
