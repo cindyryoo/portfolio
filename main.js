@@ -6,7 +6,10 @@ const homeBtn = document.querySelector('.home__btn');
 const navbarMenu = document.querySelector('.navbar__menu');
 const navbarHeight = navbar.getBoundingClientRect().height;
 const homeHeight = home.getBoundingClientRect().height;
-const arrowBtn = document.querySelector('.arrow__btn')
+const arrowBtn = document.querySelector('.arrow__btn');
+const workCategoriesBtn = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects')
+const projects = document.querySelectorAll('.project');
 
 document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight) {
@@ -44,6 +47,29 @@ arrowBtn.addEventListener('click', () => {
     scrollIntoView('#home');
 })
 
+
+
+
+workCategoriesBtn.addEventListener('click', (event) => {
+    const target = event.target;
+    const filter = target.dataset.filter || target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+    
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => {
+            const type = project.dataset.type
+            if(filter === type || filter == '*'){
+                project.classList.remove('invisible');
+            }else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+});
 
 
 function scrollIntoView(selector) {
